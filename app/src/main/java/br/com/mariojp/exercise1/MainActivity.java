@@ -17,4 +17,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void clickCumprimentar(View v){
+        EditText nome = findViewById(R.id.editNome);
+        TextView label = findViewById(R.id.labelMensagem);
+
+        if (nome.getText().equals("")){
+            return;
+        }
+        label.setText("Alô, "+nome.getText()+"!");
+    }
+
 }
